@@ -5,9 +5,15 @@
 #include <dt-bindings/zmk/outputs.h>
 
 &lt {
-    tapping-term-ms = <200>;
+    tapping-term-ms = <240>;
     flavor = "balanced";
-    quick-tap-ms = <180>;
+    quick-tap-ms = <150>;
+};
+
+&mt {
+    tapping-term-ms = <170>;
+    quick-tap-ms = <100>;
+    flavor = "tap-preferred";
 };
 
 // enum charybdis_keymap_layers {
