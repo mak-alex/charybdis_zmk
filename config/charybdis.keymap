@@ -28,7 +28,6 @@
 //     _MOS, 7 - MOS_SPACE &lt 7 SPACE
 // };
 
-
 / {
     keymap {
         compatible = "zmk,keymap";
