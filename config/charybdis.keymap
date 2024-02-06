@@ -46,7 +46,7 @@
 &trans  &kp TAB         &kp Q  &kp W     &kp E      &kp R    &trans    &kp N7    &kp UP    &kp N9     &kp TAB          &to 0
 &trans  &kp LEFT_SHIFT  &kp A  &kp S     &kp D      &kp F    &trans    &kp LEFT  &kp DOWN  &kp RIGHT  &kp RIGHT_SHIFT  &trans
 &trans  &kp LCTRL       &kp Z  &kp X     &kp C      &kp V    &trans    &trans    &trans    &trans     &kp RCTRL        &kp PRINTSCREEN
-                               &kp LALT  &kp SPACE  &mo _GFN    &mkp MB1  &mkp MB2
+                               &kp LALT  &kp SPACE  &mo _GFN    &trans  &trans
             >;
         };
 
@@ -74,7 +74,7 @@
             label = "_ESM";
             bindings = <
 &kp ESC         &none  &none      &none      &none      &none        &trans    &none    &none  &none  &none  &tog 4
-&kp LEFT_SHIFT  &none  &mkp LCLK  &mkp MCLK  &mkp RCLK  &none        &none     &none    &none  &none  &none  &trans
+&kp LEFT_SHIFT  &none  &trans  &trans  &trans  &none        &none     &none    &none  &none  &none  &trans
 &kp TAB         &none  &mkp MB4   &none      &mkp MB5   &none        &none     &none    &none  &none  &none  &trans
                                   &kp LALT   &trans     &kp LCTRL    &kp BSPC  &kp RET
             >;
@@ -84,7 +84,7 @@
             label = "_NAV";
             bindings = <
 &bootloader     &none  &none      &none      &none      &none        &trans    &none     &none   &none      &none       &tog 4
-&kp LEFT_SHIFT  &none  &mkp LCLK  &mkp MCLK  &mkp RCLK  &none        &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &caps_word  &trans
+&kp LEFT_SHIFT  &none  &trans  &trans  &trans  &none        &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &caps_word  &trans
 &kp TAB         &none  &mkp MB4   &none      &mkp MB5   &none        &none     &none     &none   &none      &none       &trans
                                   &kp LALT   &trans     &kp LCTRL    &kp BSPC  &kp RET
             >;
@@ -94,7 +94,7 @@
             label = "_NUM";
             bindings = <
 &kp ESC         &kp N1  &kp N2     &kp N3     &kp N4     &kp N5       &kp N6    &kp N7   &kp N8  &kp N9   &kp N0   &bootloader
-&kp LEFT_SHIFT  &none   &mkp LCLK  &mkp MCLK  &mkp RCLK  &none        &none     &none    &none   &none    &none    &trans
+&kp LEFT_SHIFT  &trans   &trans  &trans  &trans  &trans        &trans     &trans    &trans   &trans    &trans    &trans
 &kp F1          &kp F2  &kp F3     &kp F4     &kp F5     &kp F6       &kp F7    &kp F8   &kp F9  &kp F10  &kp F11  &kp F12
                                    &kp LALT   &trans     &kp LCTRL    &kp BSPC  &kp RET
             >;
@@ -103,10 +103,10 @@
         MOS {
             label = "_MOS";
             bindings = <
-&kp ESC         &none  &none      &none      &none      &none        &trans     &none      &none  &none  &none  &tog 4
-&kp LEFT_SHIFT  &none  &mkp LCLK  &mkp MCLK  &mkp RCLK  &none        &none      &none      &none  &none  &none  &trans
-&kp TAB         &none  &mkp MB4   &none      &mkp MB5   &none        &none      &none      &none  &none  &none  &trans
-                                  &kp LALT   &trans     &kp LCTRL    &mkp LCLK  &mkp RCLK
+&trans         &trans  &trans      &trans      &trans      &trans        &trans     &trans      &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans        &trans      &trans      &trans  &trans  &trans  &trans
+&mkp MCLK         &trans  &trans  &trans      &trans   &trans        &trans      &trans      &trans  &trans  &trans  &trans
+                                  &mkp LCLK   &mkp RCLK     &trans    &trans  &trans
             >;
         };
     };
