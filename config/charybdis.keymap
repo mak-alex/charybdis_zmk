@@ -43,7 +43,7 @@
         Gam {
             label = "_GAM";
             bindings = <
-&trans  &kp TAB         &kp Q  &kp W     &kp E      &kp R    &trans    &none    &kp UP    &none     &kp TAB          &tog _DEF
+&trans  &kp TAB         &kp Q  &kp W     &kp E      &kp R    &trans    &none    &kp UP    &none     &kp TAB          &to _DEF
 &trans  &kp LSHIFT  &kp A  &kp S     &kp D      &kp F    &trans    &kp LEFT  &kp DOWN  &kp RIGHT  &kp RSHIFT  &trans
 &trans  &kp LCTRL       &kp Z  &kp X     &kp C      &kp V    &trans    &trans    &trans    &trans     &kp RCTRL        &kp PRINTSCREEN
                                &kp LALT  &kp SPACE  &mo _GFN    &mkp LCLK   &mkp RCLK
@@ -85,7 +85,7 @@
             bindings = <
 &bootloader     &none  &none      &none      &none      &none             &trans    &none     &kp LC(X)   &kp LC(Z)      &none       &trans
 &none  &kp LCMD  &kp LALT   &kp LCTRL   &kp LSHIFT  &kp PRINTSCREEN                     &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp CAPSLOCK  &trans
-&none         &kp LC(LA(LEFT))   &kp LC(LA(RIGHT)) &tog _GAM      &trans     &kp DEL        &none     &kp PG_DN   &kp PG_UP   &none      &none       &trans
+&none         &kp LC(LA(LEFT))   &kp LC(LA(RIGHT)) &to _GAM      &trans     &kp DEL        &none     &kp PG_DN   &kp PG_UP   &none      &none       &trans
                                   &kp LALT   &trans     &kp LCTRL         &none  &kp RET
             >;
         };
