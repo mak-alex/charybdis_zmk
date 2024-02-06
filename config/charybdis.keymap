@@ -33,7 +33,7 @@
         Def {
             label = "_DEF";
             bindings = <
-&kp TAB        &kp Q  &kp W  &kp E         &kp R      &kp T          &kp Y      &kp U          &kp I      &kp O    &kp P     &tog 4
+&kp TAB        &kp Q  &kp W  &kp E         &kp R      &kp T          &kp Y      &kp U          &kp I      &kp O    &kp P     &kp K_APP
 &kp LSHFT      &kp A  &kp S  &kp D         &kp F      &kp G          &kp H      &kp J          &kp K      &kp L    &kp SEMI  &kp APOS
 &mt LCTRL ESC  &kp Z  &kp X  &kp C         &kp V      &kp B          &kp N      &kp M          &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_GUI
                              &kp LEFT_ALT  &lt _NAV TAB  &lt _MOS SPACE    &lt _SYM RET  &kp BACKSPACE
@@ -43,19 +43,19 @@
         Gam {
             label = "_GAM";
             bindings = <
-&trans  &kp TAB         &kp Q  &kp W     &kp E      &kp R    &trans    &kp N7    &kp UP    &kp N9     &kp TAB          &to 0
-&trans  &kp LEFT_SHIFT  &kp A  &kp S     &kp D      &kp F    &trans    &kp LEFT  &kp DOWN  &kp RIGHT  &kp RIGHT_SHIFT  &trans
+&trans  &kp TAB         &kp Q  &kp W     &kp E      &kp R    &trans    &none    &kp UP    &none     &kp TAB          &tog _DEF
+&trans  &kp LSHIFT  &kp A  &kp S     &kp D      &kp F    &trans    &kp LEFT  &kp DOWN  &kp RIGHT  &kp RSHIFT  &trans
 &trans  &kp LCTRL       &kp Z  &kp X     &kp C      &kp V    &trans    &trans    &trans    &trans     &kp RCTRL        &kp PRINTSCREEN
-                               &kp LALT  &kp SPACE  &mo _GFN    &trans  &trans
+                               &kp LALT  &kp SPACE  &mo _GFN    &mkp LCLK   &mkp RCLK
             >;
         };
 
         GFN {
             label = "_GFN";
             bindings = <
-&none  &kp N1  &kp N2  &kp N3    &kp N4     &kp N5          &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp DEL
-&none  &kp N6  &kp N7  &kp N8    &kp N9     &kp N0          &kp UNDER  &kp EQUAL  &kp LBKT         &kp RBKT  &kp BSLH  &kp GRAVE
-&none  &kp G   &kp J   &kp I     &kp M      &kp T           &kp MINUS  &kp PLUS   &kp LBRC         &уkp RBRC  &kp PIPE  &kp TILDE
+&none  &kp N1  &kp N2  &kp N3    &kp N4     &kp N5          &none  &none   &kp UP  &none  &kp TAB  &kp DEL
+&none  &kp N6  &kp N7  &kp N8    &kp N9     &kp N0          &none  &kp LEFT  &kp DOWN  &kp RIGHT  &kp RIGHT_SHIFT  &kp GRAVE
+&none  &kp G   &kp J   &kp I     &kp M      &kp T           &none  &none   &none         &none  &kp RCTRL  &kp TILDE
                        &kp LGUI  &kp SPACE  &kp LEFT_ALT    &none      &none
             >;
         };
@@ -64,8 +64,8 @@
             label = "_SYM";
             bindings = <
 &trans  &kp N1        &kp N2      &kp N3      &kp N4   &kp N5      &kp N6          &kp N7     &kp N8          &kp N9           &kp N0         &trans
-&trans  &bt BT_CLR    &bt BT_PRV  &bt BT_NXT  &none    &kp PIPE    &kp MINUS       &kp EQUAL  &kp N5          &kp N6           &kp PLUS       &trans
-&trans  &out OUT_TOG  &kp PG_DN   &kp PG_UP   &kp END  &trans      &kp UNDERSCORE  &kp PLUS   &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp BACKSLASH  &kp GRAVE
+&trans  &bt BT_CLR    &bt BT_PRV  &bt BT_NXT  &none    &kp PIPE    &kp MINUS       &kp RSHIFT    &kp RCTRL   &kp RALT    &kp RCMD       &kp GRAVE
+&trans  &out OUT_TOG  &kp PG_DN   &kp PG_UP   &kp END  &trans      &kp UNDERSCORE  &kp PLUS   &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp BACKSLASH  &kp TILDE
                                   &trans      &trans   &mo _ESM       &trans          &trans
             >;
         };
@@ -73,9 +73,9 @@
         ESM {
             label = "_ESM";
             bindings = <
-&kp ESC         &none  &none      &none      &none      &none        &trans    &none    &none  &none  &none  &tog 4
-&kp LEFT_SHIFT  &none  &trans  &trans  &trans  &none        &none     &none    &none  &none  &none  &trans
-&kp TAB         &none  &trans   &none      &trans   &none        &none     &none    &none  &none  &none  &trans
+&kp ESC         &kp LS(N1)        &kp LS(N2)      &kp LS(N3)      &kp LS(N4)   &kp LS(N5)      &kp LS(N6)          &kp LS(N7)     &kp LS(N8)          &kp LS(N9)           &kp LS(N0)  &kp BSPC
+&kp LSHIFT  &none  &trans  &trans  &trans  &none        &none     &none    &none  &none  &kp PIPE  &kp GRAVE
+&kp TAB         &none  &trans   &none      &trans   &none        &none     &none    &kp LEFT_BRACKET     &kp RIGHT_BRACKET   &kp SLASH  &kp TILDE
                                   &kp LALT   &trans     &kp LCTRL    &kp BSPC  &kp RET
             >;
         };
@@ -83,10 +83,10 @@
         NAV {
             label = "_NAV";
             bindings = <
-&bootloader     &none  &none      &none      &none      &none        &trans    &none     &none   &none      &none       &tog 4
-&kp LEFT_SHIFT  &none  &trans  &trans  &trans  &none        &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &caps_word  &trans
-&kp TAB         &none  &trans   &none      &trans   &none        &none     &none     &none   &none      &none       &trans
-                                  &kp LALT   &trans     &kp LCTRL    &none  &kp RET
+&bootloader     &none  &none      &none      &none      &none             &trans    &none     &kp LC(X)   &kp LC(Z)      &none       &trans
+&none  &kp LCMD  &kp LALT   &kp LCTRL   &kp LSHIFT  &kp PRINTSCREEN                     &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp CAPSLOCK  &trans
+&none         &kp LC(LA(LEFT))   &kp LC(LA(RIGHT)) &tog _GAM      &trans     &kp DEL        &none     &kp PG_DN   &kp PG_UP   &none      &none       &trans
+                                  &kp LALT   &trans     &kp LCTRL         &none  &kp RET
             >;
         };
 
@@ -94,9 +94,9 @@
             label = "_NUM";
             bindings = <
 &kp ESC         &kp N1  &kp N2     &kp N3     &kp N4     &kp N5       &kp N6    &kp N7   &kp N8  &kp N9   &kp N0   &bootloader
-&kp LEFT_SHIFT  &trans   &trans  &trans  &trans  &trans        &trans     &trans    &trans   &trans    &trans    &trans
+&none  &kp LCMD  &kp LALT   &kp LCTRL   &kp LSHIFT &none        &trans     &kp RSHIFT    &kp RCTRL   &kp RALT    &kp RCMD    &trans
 &kp F1          &kp F2  &kp F3     &kp F4     &kp F5     &kp F6       &kp F7    &kp F8   &kp F9  &kp F10  &kp F11  &kp F12
-                                   &kp LALT   &trans     &kp LCTRL    &kp BSPC  &kp RET
+                                   &kp LALT   &trans     &kp LCTRL    &kp BSPC  &kp RETу
             >;
         };
 
@@ -105,7 +105,7 @@
             bindings = <
 &trans         &trans  &trans      &trans      &trans      &trans        &trans     &trans      &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans        &trans      &trans      &trans  &trans  &trans  &trans
-&mkp MCLK         &trans  &trans  &trans      &trans   &trans        &trans      &trans      &trans  &trans  &trans  &mkp LCLK
+&mkp MCLK         &trans  &trans  &trans      &trans   &trans        &trans      &kp PG_DN      &kp PG_UP  &trans  &kp LC(LA(LEFT))   &kp LC(LA(RIGHT))
                                 &trans   &trans   &trans     &mkp LCLK   &mkp RCLK
             >;
         };
