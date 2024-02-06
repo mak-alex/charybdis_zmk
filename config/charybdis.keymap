@@ -5,6 +5,15 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/keys.h>
 
+#define _DEF 0
+#define _GAM 1
+#define _GFN 2
+#define _SYM 3
+#define _ESM 4
+#define _NAV 5
+#define _NUM 6
+#define _MOS 7
+
 &lt {
     tapping-term-ms = <240>;
     flavor = "balanced";
@@ -17,17 +26,6 @@
     flavor = "tap-preferred";
 };
 
-// enum charybdis_keymap_layers {
-//     _DEF,
-//     _GAM, 1
-//     _GFN, 2
-//     _SYM, 3 - SYM_ENT &lt 3 RET
-//     _ESM, 4
-//     _NAV, 5 - NAV_TAB &lt 5 tab
-//     _NUM, 6
-//     _MOS, 7 - MOS_SPACE &lt 7 SPACE
-// };
-
 / {
     keymap {
         compatible = "zmk,keymap";
@@ -38,10 +36,8 @@
 &kp TAB        &kp Q  &kp W  &kp E         &kp R      &kp T          &kp Y      &kp U          &kp I      &kp O    &kp P     &tog 4
 &kp LSHFT      &kp A  &kp S  &kp D         &kp F      &kp G          &kp H      &kp J          &kp K      &kp L    &kp SEMI  &kp APOS
 &mt LCTRL ESC  &kp Z  &kp X  &kp C         &kp V      &kp B          &kp N      &kp M          &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_GUI
-                             &kp LEFT_ALT  &lt 5 TAB  &lt 7 SPACE    &lt 3 RET  &kp BACKSPACE
+                             &kp LEFT_ALT  &lt _NAV TAB  &lt _MOS SPACE    &lt _SYM RET  &kp BACKSPACE
             >;
-
-            trackball-bindings = <&tmv_coarse>;
         };
 
         Gam {
@@ -50,7 +46,7 @@
 &trans  &kp TAB         &kp Q  &kp W     &kp E      &kp R    &trans    &kp N7    &kp UP    &kp N9     &kp TAB          &to 0
 &trans  &kp LEFT_SHIFT  &kp A  &kp S     &kp D      &kp F    &trans    &kp LEFT  &kp DOWN  &kp RIGHT  &kp RIGHT_SHIFT  &trans
 &trans  &kp LCTRL       &kp Z  &kp X     &kp C      &kp V    &trans    &trans    &trans    &trans     &kp RCTRL        &kp PRINTSCREEN
-                               &kp LALT  &kp SPACE  &mo 2    &mkp MB1  &mkp MB2
+                               &kp LALT  &kp SPACE  &mo _GFN    &mkp MB1  &mkp MB2
             >;
         };
 
@@ -70,7 +66,7 @@
 &trans  &kp N1        &kp N2      &kp N3      &kp N4   &kp N5      &kp N6          &kp N7     &kp N8          &kp N9           &kp N0         &trans
 &trans  &bt BT_CLR    &bt BT_PRV  &bt BT_NXT  &none    &kp PIPE    &kp MINUS       &kp EQUAL  &kp N5          &kp N6           &kp PLUS       &trans
 &trans  &out OUT_TOG  &kp PG_DN   &kp PG_UP   &kp END  &trans      &kp UNDERSCORE  &kp PLUS   &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp BACKSLASH  &kp GRAVE
-                                  &trans      &trans   &mo 4       &trans          &trans
+                                  &trans      &trans   &mo _ESM       &trans          &trans
             >;
         };
 
