@@ -26,6 +26,33 @@
 };
 
 / {
+    behaviors {
+        hm: hold_preferred_homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <125>;
+            flavor = "hold-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+        tm: tap_preferred_homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <125>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+        mlt: mouse_lt {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&mo>, <&mkp>;
+        };
+    };
     keymap {
         compatible = "zmk,keymap";
 
